@@ -1,0 +1,13 @@
+{
+  "name": "intelligent-gecko",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/twinkling-gecko/intelligent-gecko.git",
+  "author": "Akira Shinohara <k017c1067@it-neec.jp>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.18.2",
+    "@s10akir/marp-moja-teal": "^0.1.0"
+  }
+}
