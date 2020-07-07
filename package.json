@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.18.2"
+    "@marp-team/marp-cli": "^0.18.2",
+    "@s10akir/marp-moja-teal": "^0.1.0"
   }
 }

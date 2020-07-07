@@ -1,5 +1,10 @@
 {
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "markdown.marp.enableHtml": true,
+  "markdown.marp.themes": [
+    "node_modules/@s10akir/marp-moja-teal/themes/moja-teal.css",
+    "node_modules/@s10akir/marp-moja-teal/themes/moja-teal-a4.css"
+  ]
 }
