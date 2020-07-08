@@ -17,7 +17,7 @@ jobs:
           node-version: '12.x'
 
       - name: add registry token
-        run: echo '//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN' >> .npmrc
+        run: echo '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
 
       - name: Install dependencies
         run: npm install
