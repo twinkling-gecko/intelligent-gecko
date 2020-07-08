@@ -10,6 +10,7 @@
 
 - VSCode
 - Node.js
+- npm
 - yarn
 
 ## Installation
