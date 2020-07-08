@@ -19,7 +19,7 @@ jobs:
       - name: add registry token
         run: echo '//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}' >> .npmrc
 
-      - name: Install dependencies
+      - name: install dependencies
         run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
