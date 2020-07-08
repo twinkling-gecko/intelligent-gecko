@@ -6,6 +6,17 @@
   "author": "Akira Shinohara <k017c1067@it-neec.jp>",
   "license": "MIT",
   "private": true,
+  "marp": {
+    "inputDir": "./slides",
+    "output": "./public",
+    "themeSet": [
+      "./node_modules/@s10akir/marp-moja-teal/themes/",
+      "./node_modules/@s10akir/marp-moja-gecko/themes/"
+    ]
+  },
+  "scripts": {
+    "build": "marp"
+  },
   "devDependencies": {
     "@marp-team/marp-cli": "^0.18.2",
     "@s10akir/marp-moja-teal": "^0.1.0"
