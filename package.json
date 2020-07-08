@@ -15,7 +15,7 @@
     ]
   },
   "scripts": {
-    "build": "marp"
+    "build": "marp && ./tools/gen_toc.sh"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^0.18.2",
