@@ -16,17 +16,14 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: add registry token
+        run: echo '//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN' > .npmrc
+
       - name: Install dependencies
         run: npm install
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
       - run: npm run build
 
       - name: Deploy
