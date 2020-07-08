@@ -12,7 +12,9 @@
     "themeSet": [
       "./node_modules/@s10akir/marp-moja-teal/themes/",
       "./node_modules/@s10akir/marp-moja-gecko/themes/"
-    ]
+    ],
+    "html": true,
+    "lang": "ja"
   },
   "scripts": {
     "build": "marp && ./tools/gen_toc.sh",
