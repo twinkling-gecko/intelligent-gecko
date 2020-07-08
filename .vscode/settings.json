@@ -5,6 +5,7 @@
   "markdown.marp.enableHtml": true,
   "markdown.marp.themes": [
     "node_modules/@s10akir/marp-moja-teal/themes/moja-teal.css",
-    "node_modules/@s10akir/marp-moja-teal/themes/moja-teal-a4.css"
+    "node_modules/@s10akir/marp-moja-teal/themes/moja-teal-a4.css",
+    "node_modules/@s10akir/marp-moja-gecko/themes/moja-gecko.css"
   ]
 }
