@@ -84,11 +84,11 @@ theme: <テーマ名>
 
 ## Operation
 
-1. `slides/`に`content_title_slides.md`の形式で marp 記法の markdown を記述する
+1. `slides/`に`content_title.md`の形式で marp 記法の markdown を記述する
 1. master に push すると自動的に`slides/`にある markdown がビルドされ、github pages にデプロイされる
 
 - 基本的には master にそのまま commit で良いと思うが、万が一自分の担当ではないスライドを触る際は conflict に注意
-- レンダリング済みのスライドは<https://twinkling-gecko.github.io/intelligent-gecko/(ファイル名)>で閲覧可能
+- レンダリング済みのスライドは<https://twinkling-gecko.github.io/intelligent-gecko/>で閲覧可能
 
 ## themes
 
