@@ -3,49 +3,55 @@ marp: true
 theme: moja-gecko
 ---
 
+<style>
+section.center {
+  text-align: center;
+}
+</style>
+
 <!-- _class: cover -->
+
 # Go 勉強会 2
 
-## echoで作るwebサーバ
+## echo で作る web サーバ
 
 ---
 
-# GoのWeb FW
+# Go の Web FW
 
-* あんまりデファクトがない
-* gin
-* beego
-* martini
-* revel
-* **echo**
-...
+- あんまりデファクトがない
+- gin
+- beego
+- martini
+- revel
+- **echo**
+  ...
 
 ---
 
-## そもそもFWいらなくない？派
+## そもそも FW いらなくない？派
 
-* goは組み込みのnet/httpが優秀
-* これベースに愚直にやってけばそれでいいじゃん
-* FWの習得コストが無駄じゃん
+- go は組み込みの net/http が優秀
+- これベースに愚直にやってけばそれでいいじゃん
+- FW の習得コストが無駄じゃん
 
-## やっぱFWは欲しい派
+## やっぱ FW は欲しい派
 
-* リクエストをバラしてちまちまパースするのがつらい
-* メソッドによってルーティング先変えたりとかしんどい
-* ミドルウェアの仕組みを作るのがダルい
+- リクエストをバラしてちまちまパースするのがつらい
+- メソッドによってルーティング先変えたりとかしんどい
+- ミドルウェアの仕組みを作るのがダルい
 
-
-**=> echoでいいじゃん**
+**=> echo でいいじゃん**
 
 ---
 
 # echo
 
-* goのminimalなweb FW
-* パフォーマンスが高め
-* expressとかflaskとかsinatraみたいなminimalさ
-  * RevelやRailsとは反対に居る存在
-* 言葉としてはVCモデルって感じ？
+- go の minimal な web FW
+- パフォーマンスが高め
+- express とか flask とか sinatra みたいな minimal さ
+  - Revel や Rails とは反対に居る存在
+- 言葉としては VC モデルって感じ？
 
 ---
 
@@ -75,11 +81,22 @@ $ cd $GOPATH/src/github.com/twinkling-gecko/echo-test-server
 ---
 
 ## main.go
+
 エントリポイント
 サーバの起動とミドルウェアの読み込みを行ってる
 
 ## pkg/handler
+
 リクエストを捌いてレスポンスを作る処理を行ってる
 
 ## pkg/router
-HTTPのリクエストの受け口を作ってハンドラに引き渡してる
+
+HTTP のリクエストの受け口を作ってハンドラに引き渡してる
+
+---
+
+<!-- _class: center -->
+
+# ライブコーディングします
+
+![](https://imgc.appbank.net/c/wp-content/uploads/2017/02/morikubo2.jpg)
