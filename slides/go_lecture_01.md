@@ -42,7 +42,7 @@ export GOPATH=~/go # 例
 
 ---
 
-# \$GO のプロジェクト準備
+# GO のプロジェクト準備
 
 ## 2 秒でわかる！Go のプロジェクト初期化講座
 
@@ -112,7 +112,7 @@ While you’re gonna wake up and work hard at it. Nothing is impossible.
   - **エントリポイントは「main パッケージの main 関数」である必要がある**
   - java で言う psvm
 - import でパッケージを読み込んでいる
-- Go では**public なメンバはすべて大文字で始まる**ので、 `fmr.Println` を呼んでいる
+- Go では**public なメンバはすべて大文字で始まる**ので、 `fmt.Println` を呼んでいる
 
 ---
 
