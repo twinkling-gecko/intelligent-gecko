@@ -11,7 +11,8 @@
     "output": "./public",
     "themeSet": [
       "./node_modules/@s10akir/marp-moja-teal/themes/",
-      "./node_modules/@s10akir/marp-moja-gecko/themes/"
+      "./node_modules/@s10akir/marp-moja-gecko/themes/",
+      "./node_modules/@s10akir/marp-moja-simple/themes/"
     ],
     "html": true,
     "lang": "ja"
@@ -22,7 +23,8 @@
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^0.18.2",
+    "@s10akir/marp-moja-gecko": "^0.1.0",
     "@s10akir/marp-moja-teal": "^0.1.0",
-    "@s10akir/marp-moja-gecko": "^0.1.0"
+    "@s10akir/marp-moja-simple": "^0.1.0"
   }
 }

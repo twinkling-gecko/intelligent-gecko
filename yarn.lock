@@ -115,6 +115,13 @@
   dependencies:
     "@marp-team/marp-cli" "^0.18.2"
 
+"@s10akir/marp-moja-simple@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@s10akir/marp-moja-simple/0.1.0/c60bbacfd3905680828f20a9f0cfc5988d7df3ce890c6a65a7e4824674a2b277#7c5b4481d62fa33bdd6abdb4b3c7a0fdfcdb5d38"
+  integrity sha512-TqnSqdKwbxTB0DlqA1exjfJ1B/LQWhup6p5NdsUOqNzzBYCyPHtTcURDctIYlY7k0wVASDa/ke23H659tmiB+w==
+  dependencies:
+    "@marp-team/marp-cli" "^0.18.2"
+
 "@s10akir/marp-moja-teal@^0.1.0":
   version "0.1.0"
   resolved "https://npm.pkg.github.com/download/@s10akir/marp-moja-teal/0.1.0/769dae2777b42ee30660fb8f989c5400732e0f7c763d1b284dbfa4cbf1559d16#9573b487d9561826f9c0f5810f81b495c729ead7"
