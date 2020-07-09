@@ -15,222 +15,257 @@
 */
 
 /* M PLUS 1p from Google Fonts */div#p>svg>foreignObject>section{background-color:#f2f2f2;background-image:url("https://user-images.githubusercontent.com/38117745/86141985-a555af80-bb2d-11ea-8827-49ceb57d79a0.png");background-position:bottom 8% right 3%;background-repeat:no-repeat;background-size:23%;justify-content:normal;font-size:20pt;padding:100px}div#p>svg>foreignObject>section{--marpit-root-font-size:20pt}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{color:black}div#p>svg>foreignObject>section h1{text-align:center;border-bottom:solid 8px}div#p>svg>foreignObject>section strong{background-color:yellow}div#p>svg>foreignObject>section.cover{justify-content:center;text-align:center;background-image:url("https://user-images.githubusercontent.com/38117745/86197071-9869a800-bb8f-11ea-9491-ecbf1ef788a4.png");background-color:#9bafb5}div#p>svg>foreignObject>section.cover h1{font-size:48pt}div#p>svg>foreignObject>section.cover h2{margin-top:100px;color:white;border-bottom:none;font-weight:normal}div#p>svg>foreignObject>section.back-cover{background-color:#f6a21d;text-align:center;padding:20px;margin:none;background-image:url("https://user-images.githubusercontent.com/38117745/86197071-9869a800-bb8f-11ea-9491-ecbf1ef788a4.png")}div#p>svg>foreignObject>section.back-cover h2{color:black;font-size:36pt;font-weight:700;border-bottom:none}div#p>svg>foreignObject>section.back-cover img{width:70%;height:auto}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="cover" data-theme="moja-gecko" class="cover" style="--class:cover;--theme:moja-gecko;">
-<h1>アーキテクチャ勉強会</h1>
-<h2>Team: twinkling-gecko<br />Version: 1.1</h2>
+<h1>スクラム開発習得資料</h1>
+<h2>Team: twinkling-gecko<br />Version: 1.2</h2>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>アーキテクチャってなんだよ (1/3)</h1>
+<h1>スクラム開発について</h1>
 <ul>
-<li>architecture: 建設術 建設様式 構造…</li>
-<li>IT的には設計思想とか設計方式とかそんな感じ
+<li>アジャイル開発に分類される開発手法</li>
+<li>アジャイル自体に色々宗派があるし、スクラム自体にも宗派が色々
 <ul>
-<li>システムアーキテクチャとかソフトウェアアーキテクチャとか色々</li>
-<li>例えばノイマン型・ノイマン型アーキテクチャとか</li>
-<li>あとCPUアーキテクチャとか
+<li>厳しい決まりがあるわけではない
 <ul>
-<li>x86・amd64・arm・MIPS…</li>
+<li>俺ら流にいい感じにやろうぜ</li>
 </ul>
 </li>
 </ul>
 </li>
+<li>計画より機動力を重視する (アジャイル全体に言える)</li>
+<li>チームとしての成果を重視する
+<ul>
+<li>ロールを決めるが、<strong>課題にはチーム全体で取り組み、解決する</strong></li>
+</ul>
+</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="moja-gecko" style="--theme:moja-gecko;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://user-images.githubusercontent.com/38117745/86519864-f50fe000-be79-11ea-86f3-78f48d106ed0.png&quot;);background-size:35%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="3" data-theme="moja-gecko" style="--theme:moja-gecko;" data-marpit-advanced-background="content">
-<h1>アーキテクチャってなんだよ (2/3)</h1>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>一定期間のスプリントを回していく</h1>
 <ul>
-<li>こんなん</li>
-<li>システムの構成を<br />
-表す表現</li>
+<li>「プロジェクト」として 1 つの不可逆な流れになるウォーターフォールと違い、最長でも 4 週間の<strong>短いスプリントを繰り返していく</strong></li>
+<li>バックログを目標とし、課題解決を行う</li>
+<li>プロジェクト全体としては「<strong>プロダクトバックログ</strong>」を定義</li>
+<li>各スプリントで、「<strong>スプリントバックログ</strong>」としてやるべきことを<br />
+定義して、それを消化していく</li>
+<li>基本的に消化するし、もし消化しきれなければ次のスプリントへ<br />
+持ち越す</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="moja-gecko" style="--theme:moja-gecko;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://user-images.githubusercontent.com/38117745/86589837-5b574880-bfc9-11ea-8fb8-140143fca6c1.png&quot;);background-size:35%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="4" data-theme="moja-gecko" style="--theme:moja-gecko;" data-marpit-advanced-background="content">
-<h1>アーキテクチャってなんだよ (3/3)</h1>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>バックログ (1)</h1>
+<h2>プロダクトバックログ</h2>
 <ul>
-<li>旭化成<br />
-エレクトロニクス<br />
-から引っ張ってきた</li>
+<li>
+<p>プロダクトで実現したい目標を示したタスクリスト</p>
+</li>
+<li>
+<p>ユーザーストーリー形式が多く用いられる</p>
+<ul>
+<li>プロダクトによってどんな<strong>付加価値</strong>を実現したいのかを記載したもの</li>
+<li>付加価値は、<strong>誰</strong>は<strong>何</strong>を<strong>どうできる</strong>として表現しやすい</li>
+<li>ペルソナ + ニーズ + 目的形式</li>
+<li>例: ユーザは重量推移から嗜好品の依存度合いを知ることができる</li>
+</ul>
+</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>アーキテクチャってなんだよ (4/4)</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>バックログ (2)</h1>
+<h2>プロダクトバックログ (続き)</h2>
 <ul>
-<li>ソフトウェアのアーキテクチャとしては一応<br />
-IEEE 1471として標準があるらしい</li>
-<li>アーキテクチャ記述言語(モデリング言語)とかもある
+<li>技術的な視点では<strong>なく</strong>、企画者的な視点から見たものになる</li>
+<li>プロダクトオーナーが優先順位づけに責任を負う
 <ul>
-<li>SysML</li>
-<li>AADL</li>
+<li>追加や修正があれば、<strong>最終的には</strong>プロダクトオーナーの責任で行う
+<ul>
+<li>追加・修正のことをプロダクトバックログリファインメント<br />
+と呼ぶ</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h2>➔これを踏まえて、今回のソリューションのアーキテクチャについて<br />考えたい</h2>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>うちのアーキテクチャ (1/2)</h1>
-<p><img src="https://user-images.githubusercontent.com/38117745/86590887-7034db80-bfcb-11ea-8060-d77139fe6c72.png" alt="image" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>うちのアーキテクチャ (2/2)</h1>
-<p>主に以下3つで構成される</p>
+<h1>バックログ (3)</h1>
+<h2>プロダクトバックログ (続き)</h2>
 <ul>
-<li>センシングユニット</li>
-<li>ローカルハブ</li>
-<li>プラットフォーム</li>
-</ul>
-<p>それぞれの部分について、共通認識を得ておきたい</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>センシングユニット (1/5)</h1>
-<h2>センシングユニットとは…</h2>
+<li>リファインメント以外での修正は許されない
 <ul>
-<li>センサーとマイコンを組み合わせたもの</li>
-<li>センサーを使ってデータを収集し、BLEでローカルハブに送信する事が<br />
-仕事となる
-<ul>
-<li>センサーの種類によっては、ADコンバータとかも必要</li>
+<li>最初に完全に決定する必要は無いが、安易に変更するものではない</li>
 </ul>
 </li>
+<li>スプリント中に複数のストーリーを実現させるため、<br />
+それを考慮しての粒度にする
+<ul>
+<li>結構細かい</li>
+<li>1 スプリントで 4 ストーリーとか</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>バックログ (4)</h1>
+<h2>スプリントバックログ</h2>
+<ul>
+<li>プロダクトバックログのストーリーを実現する為に必要なタスクを記載したもの</li>
+<li>実装すべき内容であるプロダクトバックログから<br />
+スプリント分を抜き出したもの</li>
+<li>こちらはタスクリストとなる</li>
+<li>優先順位付けを行い、スプリント中での消化を目指す</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>ロールについて (1)</h1>
+<ul>
+<li>ロール:Role=役割</li>
+<li>プロジェクトの関係者が担う役割</li>
+<li>なんかカタカナで色々ある</li>
+<li>責任者となるが、先に挙げた通り<strong>実際の作業はチームで行う</strong></li>
+<li>遠いロールからみてく</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>ロールについて (2)</h1>
+<h2>ステークホルダ</h2>
+<ul>
+<li>プロダクトの利用者や利害関係者
+<ul>
+<li>実際に使うユーザーとか顧客企業とか</li>
+</ul>
+</li>
+<li>今回はロールとしては用意しないが、暗に居るものとして進める</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>センシングユニット (2/5)</h1>
-<h2>センサー部分</h2>
+<h1>ロールについて (3)</h1>
+<h2>スクラムマスター</h2>
 <ul>
-<li>センサーとしては例えば
-<ul>
-<li>ロードセル</li>
-<li>ドア開閉センサー</li>
-<li>etc.</li>
-</ul>
-</li>
+<li>スクラム全体の支援者</li>
+<li>機材調達とか予算確保を担当する</li>
+<li>スケジュール管理は<strong>担当しない</strong></li>
+<li>今回は教員が担当</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>センシングユニット (3/5)</h1>
-<h2>マイコン部分</h2>
+<h1>ロールについて (4)</h1>
+<h2>プロダクトオーナー</h2>
 <ul>
-<li>マイコンとして例えば
+<li>プロダクトの完成に責任を負う</li>
+<li>プロダクトバックログの項目の優先順位を決め、並び替えをしたり、<br />
+追加・修正を行う
 <ul>
-<li>ESP32系列のボード
-<ul>
-<li>スイッチサイエンス ESPr Developer 32</li>
-<li>M5 Stackシリーズ (Basic・ATOM Matrix・Lite等)</li>
-<li>深圳のノーブランドの怪しいボードたち</li>
-</ul>
-</li>
+<li>担当はチームリーダーが多いかも(by 黛)だけど、別に誰でもよい</li>
 </ul>
 </li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>センシングユニット (4/5)</h1>
+<h1>ロールについて (5)</h1>
+<h2>チームメンバー</h2>
 <ul>
-<li>その他 Bluetoothモジュールと適当なマイコンの組み合わせ
-<ul>
-<li>TI CC2541</li>
-<li>Silicon Labs BLE112</li>
-<li>Nordic社のモジュール</li>
-</ul>
-</li>
+<li>実際にプロダクトの開発を行う</li>
+<li><strong>全体として同じゴールを目指す</strong></li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>センシングユニット (5/5)</h1>
-<h2>ソフトウェア部分</h2>
+<h1>ロールについて (6)</h1>
+<h2>スプリントオーナー</h2>
 <ul>
-<li>ino (Arduino IDE Sketch)
-<ul>
-<li>ESP32の特徴として、Arduinoの開発環境が使える
-<ul>
-<li>Arduino IDEにESP32用の拡張を入れることで対応可能</li>
-<li>ライブラリとしてESP32 BLE Arduinoとかも公開されている</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>ここ黛弁</strong></li>
+<li>今回の卒制独自のロール</li>
+<li>スプリントに対する責任者</li>
+<li>交代で決めて欲しい by 黛</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>ローカルハブ (1/2)</h1>
-<h2>ローカルハブとは…</h2>
+<h1>レビュー・ミーティング (1)</h1>
 <ul>
-<li>
-<p>Bluetooth(BLE)でセンシングユニットからデータを受け取って、<br />
-プラットフォームにEthernetなりWi-Fiなり<br />
-セルラー(携帯回線)なりでデータを送るのがメインの仕事</p>
-</li>
-<li>
-<p>あと、センシングユニットの設定もここが担う</p>
-</li>
-<li>
-<p>Bluetoothが動けば何でも良いといえば何でも良い</p>
-<ul>
-<li>Bluetoothドングルを挿したパソコンでも良いけど、<br />
-サイズとコスト面で、Raspberry Piとかが良さそう</li>
+<li>チーム内やステークホルダとの連携の為、頻繁にミーディングを行う</li>
 </ul>
+<h2>デイリースクラム</h2>
+<ul>
+<li>日々の業務開始時に実施する</li>
+<li>長くても 15 分</li>
+<li>以下の 3 点を報告する
+<ol>
+<li>前にやったこと</li>
+<li>今日やること</li>
+<li>連絡とか困ってることとか</li>
+</ol>
 </li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>ローカルハブ (2/2)</h1>
-<h2>ソフトウェア部分</h2>
+<h1>レビュー・ミーティング (2)</h1>
+<h2>スプリントレビュー</h2>
 <ul>
-<li>バックエンド部でBLEでデータを回収したり、プラットフォームに送ったり</li>
-<li>センサーの設定機能
+<li><strong>ステークホルダが同席</strong>の上で実施する
 <ul>
-<li>何でも良いけど、GoとかRustとか…</li>
+<li>今回は黛先生がステークホルダ役となる</li>
+</ul>
+</li>
+<li>各スプリントの終了後に、そのスプリントで完成したもののデモを行い、<br />
+<strong>共通認識を得る</strong>
+<ul>
+<li>ステークホルダとのフィードバックになるので、<br />
+ユーザー視点でのデモを行う</li>
 </ul>
 </li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>プラットフォーム (1/2)</h1>
-<h2>プラットフォームとは…</h2>
+<h1>レビュー・ミーティング (3)</h1>
+<h2>スプリントレトロスペクティブ</h2>
 <ul>
-<li>サービスとして動き、各家庭のローカルハブからデータを吸い上げて収集する</li>
-<li>今回はクラウド上に構築を想定している</li>
-<li>ローカルハブはここにデータを送信し、需要予測を行う企業等は<br />
-ここからデータを取得する</li>
-<li>更に、一般消費者向けの付加価値提供もここから行うことで、<br />
-場所に関係無く通知を受信出来るようにする</li>
+<li>レトロスペクティブ:retrospective=回顧</li>
+<li>各スプリントの終了後に、そのスプリントを<strong>振り返り</strong>、<br />
+良かった点、改善点、課題を共有する</li>
+<li>改善点があれば、次回のスプリントへ反映する</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>プラットフォーム (2/2)</h1>
-<h2>技術面</h2>
+<h1>スケジュールの組み方 (1)</h1>
+<h2>スプリントプランニング</h2>
 <ul>
-<li>ホスティング場所としてはAWS・GCP・Azure系のクラウドだったり、<br />
-オンプレのサーバーだったり</li>
-<li>バックエンドはやっぱりGoだったりRustだったり</li>
-<li>あと、Webアプリのホスティングも VueだったりNuxtだったり</li>
+<li>スプリント開始前に実施</li>
+<li>プロダクトバックログの中から、そのスプリントで何を達成するかを決める
+<ul>
+<li>スプリントバックログの作成</li>
+</ul>
+</li>
+<li>タスクオーナーも決める
+<ul>
+<li>もちろんオーナーはオーナーだけど、<br />
+<strong>課題にはチーム全体で取り組む</strong></li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>あと、抜けていた点 (1/2)</h1>
+<h1>スケジュールの組み方 (2)</h1>
+<h2>見積もり会</h2>
 <ul>
-<li>一般消費者が使うフロントエンドアプリについて考えてなかった</li>
-<li>ここは共通認識を得ておきたい</li>
+<li>うちのチームでの呼び方</li>
+<li>タスクのストーリーポイントを算出するやつ</li>
+<li>ストーリーポイントは基準となるあるタスクとの相対的な大変さ
+<ul>
+<li>個人の能力は考慮せず、タスクそのものだけを<br />
+相対的に比較して判断する</li>
+<li><strong>何を以って完了とするのかを明確に</strong>する</li>
+<li>完璧な精度は出ないので、まぁゆるい感じで</li>
+<li>フィボナッチ数を使うのが一般的らしい</li>
 </ul>
-<h2>一般消費者向けアプリで必要そうな部分</h2>
-<ul>
-<li>付加価値を受け取り、表示する機能<br />
-(通知を受け取ったり、統計を確認したり)</li>
-<li>センサーの設定を行う機能</li>
-<li>これらを、デバイスを問わずに提供する</li>
+</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>あと、抜けていた点 (2/2)</h1>
-<h2>一般消費者向けアプリのアーキテクチャ</h2>
+<h1>今回やってみる上で注意したほうが良さそうなこと</h1>
 <ul>
-<li>選択肢としては
+<li>繰り返しになるが、オーナーとして責任者は決めるが、<strong>実際の作業はチームとして行う</strong></li>
+<li>アジャイルもスクラムも方言が多いので、チームでいい感じにやる
 <ul>
-<li>ネイティブのモバイルアプリ+PCソフトウェア</li>
-<li>Webアプリ</li>
+<li>スクラム開発エクスペリエンス得ようぜ</li>
 </ul>
 </li>
 </ul>
@@ -240,7 +275,10 @@ IEEE 1471として標準があるらしい</li>
 <p><img src="https://i.imgur.com/aBdGj60.png" alt="img1" /></p>
 </section>
 <script>!function(){"use strict";function t(t){Array.from(document.querySelectorAll("svg[data-marpit-svg]"),e=>{const{children:r,clientHeight:i,clientWidth:o,viewBox:n}=e;e.style.transform||(e.style.transform="translateZ(0)");const a=t||e.currentScale||1,s=n.baseVal.width/a,l=n.baseVal.height/a,c=Math.min(i/l,o/s);for(let t=0;t<r.length;t+=1){const{style:e}=r[t].firstChild;e.position||(e.position="fixed"),e.transformOrigin||(e.transformOrigin="0 0"),e.transform=`scale(${c}) translateZ(0)`}})}const e=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function r(i=!0){for(const e of"Apple Computer, Inc."===navigator.vendor?[t]:[])e();Array.from(document.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{const r=t.firstChild,i=r.firstChild,{scrollWidth:o,scrollHeight:n}=i;let a,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(a=t.parentElement.parentElement),t.hasAttribute("data-marp-fitting-math")&&(a=t.parentElement),a){const t=getComputedStyle(a),e=Math.ceil(a.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(s=e)}const l=Math.max(o,s),c=Math.max(n,1),d=`0 0 ${l} ${c}`;e(r,"width",""+l),e(r,"height",""+c),e(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),e(t,"viewBox",d)&&t.classList.toggle("__reflow__")}),i&&window.requestAnimationFrame(()=>r(i))}!function(){if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");window.marpCoreBrowserScript?console.warn("Marp Core's browser script has already executed."):(Object.defineProperty(window,"marpCoreBrowserScript",{value:!0}),r())}()}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>ちゃんと見るならhttp://www.aec.co.jp/solution/opto22/epic_iiotsys.html</p><p>やっぱり、システムの設計かなぁ</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>システム設計書の書式を定めて、共通認識を得る</p><p>WFでは無いので、しっかりした設計書を出してとかはやんないけど</p><p>https://www.ogis-ri.co.jp/otc/hiroba/technical/SysML_AADL/SysML_AADL1/index.html</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>クラス用のプレゼンから引っ張ってきたやつだけど</p><p>以降の話で使うので、確認してくれれば https://user-images.githubusercontent.com/38117745/86590887-7034db80-bfcb-11ea-8060-d77139fe6c72.png</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>部品 と言ったけど、モジュールを目指しても良いかもしれない</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>ロードセル+ADコンバータのセット https://www.amazon.co.jp/dp/B07JL7NP3F</p><p>開閉センサーは多分0/1じゃないかな</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>まぁESP32系列で良さそうだけど一応ほかも</p><p>https://www.switch-science.com/catalog/3210/</p><p>https://www.switch-science.com/catalog/3647/</p><p>https://www.switch-science.com/catalog/6260/</p><p>https://www.switch-science.com/catalog/6262/</p><p>https://www.tij.co.jp/product/jp/CC2541</p><p>https://jp.silabs.com/wireless/bluetooth/bluegiga-low-energy-legacy-modules/device.ble112</p><p>詳しくはマイコン勉強会の方でやります</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>別にRasPiにこだわりはない</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>クラス向けプレゼンを作った時、この件を考慮していなかった</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>ネイティブでは無いと思うけど</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")},e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function a(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function o(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t,n){return e(n={path:t,exports:{},require:function(e,t){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==t&&n.path)}},n.exports),n.exports}((function(e){
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>プロダクトバックログという言葉自体には、大きな意味はない</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>このスライドのレビューの時点で、実施時期については色々あった
+調べた感じ、特に時期について明記されているものは見当たらなかったが、
+前のスプリントのレトロスペクティブから次のスプリントの開始までの間、
+つまり、スプリント開始前と捉えて良さそう</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>スクラム用語ではない。</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")},e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function a(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function o(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t,n){return e(n={path:t,exports:{},require:function(e,t){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==t&&n.path)}},n.exports),n.exports}((function(e){
 /*!
   * screenfull
   * v5.0.2 - 2020-02-13
