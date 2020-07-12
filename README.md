@@ -93,4 +93,5 @@ theme: <テーマ名>
 ## themes
 
 - moja-teal
+- moja-simple
 - moja-gecko
