@@ -92,7 +92,7 @@ theme: moja-gecko
 
 ![image](https://hegtel.com/wp/wp-content/uploads/2018/02/shot_181217_094432.jpg)
 
-- 昔ながらの水鉄砲例えて、出てる水の量が電流
+- 昔ながらの水鉄砲に例えて、出てる水の量が電流
 
 - 電圧 x 電流 = 電力(仕事量)
   - V x A = W
