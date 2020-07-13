@@ -25,7 +25,7 @@ GitHub Packages から npm パッケージをインストールする為に必�
    ![image](https://user-images.githubusercontent.com/38117745/86754426-d6793700-c07b-11ea-8ca8-2346844984c0.png)
 
 1. `Note`に適当な説明を入力する 管理画面での識別に使うだけなので、適当で OK  
-   ![image](https://user-images.githubusercontent.com/38117745/86755581-b5651600-c07c-11ea-8468-f2d828430fb3.png)
+   ![image](https://user-images.githubusercontent.com/38117745/87316660-071c0d80-c561-11ea-8462-a059dbbbe9d0.png)
 
 1. `Select scopes`の`read:packages`にチェックを入れる  
    ![image](https://user-images.githubusercontent.com/38117745/86756159-25739c00-c07d-11ea-90bf-84d98bb2e460.png)
