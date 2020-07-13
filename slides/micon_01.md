@@ -7,7 +7,7 @@ theme: moja-gecko
 
 # マイコン勉強会 1 電子回路編
 
-## Team: twinkling-gecko<br>Version: 1.1
+## Team: twinkling-gecko<br>Version: 1.2
 
 ---
 
