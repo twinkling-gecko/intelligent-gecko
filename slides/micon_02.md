@@ -21,7 +21,7 @@ theme: moja-gecko
 # 全体の流れ
 
 - Arduino について
-- 開発環境と ESP32 について
+- 開発環境と非 Arduino 系統のボードについて
 - 便利そうなライブラリについて
 
 ---
@@ -38,13 +38,13 @@ theme: moja-gecko
   - 文字通りのハードの設計図が公開されていて、色んなメーカーが
     互換機を出してたりする
 
-![image](https://image.itmedia.co.jp/news/articles/1806/05/l_yx_ms_01.jpg)
+![image](https://user-images.githubusercontent.com/38117745/87306579-2f047480-c553-11ea-9552-d607f168fe0f.png)
 
 ---
 
 # Hello, Arduino
 
-- Atmel 社の AVR 等(一部例外あり)をを中心に、USB や I/O ピン等のインタフェースを 1 枚のボードに収めている
+- Atmel 社の AVR 等(一部例外あり)を中心に、USB や I/O ピン等のインタフェースを 1 枚のボードに収めている
   - ラズパイがシングルボードコンピュータに属するのと同様に、ワンボードマイコンのジャンルに属する
   - ラズパイが SoC として Broadcom の BCM シリーズを載せている様に、こちらは AVR に RAM・ROM・EEPROM・クロック等を収めている
 
@@ -84,25 +84,39 @@ theme: moja-gecko
 
 ---
 
-# ino
+# CLI を使った開発
 
-- コマンドライン上で Arduino スケッチ(.ino ファイル)をビルド、アップロードすることの出来るソフトウェア
-- プロジェクトの init、ソースコードのボード向けビルド、ボードへのアップロード、シリアル通信のモニター等が可能
-- ESP32 向けの拡張機能が使えるかは情報が無かった
-  - ビルド等のバックエンドは Arduino IDE に投げているようなので、
-    やりようはあるかもしれないが大人しく
-    Arduino IDE を使ったほうが良い可能性も?
+## arduino-cli
+
+- Arduino 公式のコマンドラインツール
+- Arduino IDE の機能をコマンドラインから利用可能
+- ARM 版が存在し、Raspberry Pi で開発が行える
+
+## ino
+
+- コマンドライン上で Arduino スケッチ(.ino ファイル)をビルド、
+  アップロードすることの出来るソフトウェア
+- プロジェクトの init、ソースコードのボード向けビルド、
+  ボードへのアップロード、シリアル通信のモニター等が可能
 
 ---
 
-# ESP32 での開発
+# Arduino 系以外のボードでの開発
 
-- Arduino IDE に対する拡張である Arduino core for the ESP32 を利用可能
+## ESP32
+
+- Arduino IDE で ESP32 の開発が行える Arduino core for the ESP32 を利用可能
 - `WiFi.h`を include の上で利用可能
-- Wi-Fi でネットワークに参加し、HTTP サーバーを走らせるサンプルスケッチが同梱されている
+- Wi-Fi でネットワークに参加し、HTTP サーバーを走らせる
+  サンプルスケッチが同梱されている
+
+## M5Stack
+
+- Arduino IDE で開発するための M5Stack 公式のライブラリが存在する
 
 <!-- http://mukujii.sakura.ne.jp/esp1.html -->
 <!-- https://github.com/espressif/arduino-esp32 -->
+<!-- 特定のベンダーに深入りはしない -->
 
 ---
 
@@ -148,6 +162,10 @@ theme: moja-gecko
 ## NintendoSwitchController
 
 - Arduino Leonardo を Nintendo Switch の Joy-Con として振る舞わせる
+
+![image](https://user-images.githubusercontent.com/38117745/87307274-3d9f5b80-c554-11ea-9119-5928b778afdc.png)
+
+<!-- レビューにいい感じに描いてあったので貼り付けておく -->
 
 ---
 
