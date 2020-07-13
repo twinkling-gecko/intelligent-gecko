@@ -42,7 +42,7 @@
 </ul>
 <p><img src="https://hegtel.com/wp/wp-content/uploads/2018/02/shot_181217_094432.jpg" alt="image" /></p>
 <ul>
-<li>昔ながらの水鉄砲例えて、ピストンを押す力が電圧
+<li>昔ながらの水鉄砲に例えて、ピストンを押す力が電圧
 <ul>
 <li>強く押せば水が強く、量も沢山出る</li>
 </ul>
@@ -84,7 +84,7 @@
 <ul>
 <li>9V
 <ul>
-<li>各電池(四角いアレ)</li>
+<li>角型電池(四角いアレ)</li>
 </ul>
 </li>
 <li>12V
@@ -106,7 +106,7 @@
 <ul>
 <li>プラスとマイナスが一定(時間によって変化しない)</li>
 <li>大体の電子機器とかバッテリーはこっち</li>
-<li>電話線だと、-48V が流れてる</li>
+<li>電話線だと、DC-48V が流れてる</li>
 </ul>
 <h2>交流</h2>
 <ul>
@@ -146,16 +146,20 @@
 しか流れなかったり、<br />
 2A 流れたりする</li>
 <li>オームの法則で欲しい<br />
-パラメータを求められる</li>
+パラメータを求められる
+<ul>
+<li>電圧 = 抵抗 * 電流</li>
+</ul>
+</li>
 </ul>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>アナログ信号とデジタル信号</h1>
 <ul>
 <li>
-<p>アナログは連続的な値を表現出来る</p>
+<p>アナログは連続的な値をそのまま表現出来る</p>
 <ul>
-<li>0 から 1 までの間で、0・0.1・0.3・0.7・1 みたいな感じ</li>
+<li>最小から最大までの間で、無段階に好きな値を取れる</li>
 <li>ノイズに弱い</li>
 </ul>
 </li>
@@ -163,7 +167,12 @@
 <p>デジタルは bool でしか表現できない</p>
 <ul>
 <li>True or False</li>
-<li>0,1 のパターンに意味を持たせて、データとして表現する</li>
+<li>0,1 のパターンに意味を持たせて、データとして表現する
+<ul>
+<li>サンプリングによってアナログに近い形の<br />
+連続的な値の表現もできる</li>
+</ul>
+</li>
 <li>ノイズに強い</li>
 </ul>
 </li>
@@ -226,9 +235,26 @@
 </ul>
 </li>
 <li>ここでは、組み込み界隈で良く使われる意味でのシリアル通信を扱う</li>
+<li>以後の説明に必要なので、まずボーのお話をします</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>ボー</h1>
+<ul>
+<li>ボーレートと言ったりする</li>
+<li>シリアル通信的には、bps と同義</li>
+<li>本来の意味だと、1 秒間に何回変調を行うことが出来るか</li>
+<li>1 秒間に 300 回の変調が出来れば、300 ボーとなる</li>
+<li>シリアル通信では１回に 1 ビット転送するので、bps で表現されたりする</li>
+<li>言葉の使い方としては、「Arduino Leonardo に対して<br />
+1200 ボーでシリアル接続して閉じるとリセットされる」みたいな感じ</li>
+<li>送信機器も受信機器も、このレートでデータのやり取りをすると<br />
+認識する</li>
+<li>運用する上では、<strong>機器間でボーレートが違うと文字化けしたりする</strong><br />
+(データが壊れてしまう)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>シリアル通信</h1>
 <h2>よく使われるシリアル通信</h2>
 <ul>
@@ -241,11 +267,31 @@
 <li>物理的なインタフェースは絶滅したので、USB のコネクタで<br />
 RS232C の通信を行う USB - シリアル変換をするチップとかも<br />
 広く出回っている</li>
+<li><strong>調歩同期(非同期, async)で、通信機器同士はクロック信号の<br />
+やり取りを行わず、自身のボーでタイミングを取る</strong></li>
 </ul>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="moja-gecko" style="--theme:moja-gecko;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="moja-gecko" style="--theme:moja-gecko;">
+<h1>シリアル通信</h1>
+<h2>よく使われるシリアル通信</h2>
+<ul>
+<li>UART
+<ul>
+<li>マイコンやボード上のシリアル通信で広く使われる</li>
+<li>ルーター分解すると基板に実装されてたりする</li>
+<li>TX(送信) RX(受信) GND(グランド)の 3 線を利用</li>
+<li>こちらも調歩同期(async)
+<ul>
+<li>USART として同期式に対応した別の規格もある</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>シリアル通信</h1>
 <h2>よく使われるシリアル通信</h2>
 <ul>
@@ -258,12 +304,16 @@ RS232C の通信を行う USB - シリアル変換をするチップとかも<br
 </ul>
 </li>
 <li>マスター/スレーブが存在</li>
-<li>クロックを持ち、同期しながら通信を行う</li>
+<li>同期式のシリアル通信
+<ul>
+<li><strong>クロック信号をやり取りし、同期しながら通信を行う</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="moja-gecko" style="--theme:moja-gecko;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>シリアル通信</h1>
 <h2>よく使われるシリアル通信</h2>
 <ul>
@@ -274,31 +324,23 @@ RS232C の通信を行う USB - シリアル変換をするチップとかも<br
 <li><strong>2 本の接続線</strong>で構成され、1Mbps 位までの通信が可能</li>
 <li>転送レートは SPI に劣るが、<strong>接続線が少なくて済む コストも安い</strong></li>
 <li>マスター/スレーブが存在</li>
-<li>クロックを持ち、同期しながら通信を行う</li>
+<li>同期式のシリアル通信
+<ul>
+<li>クロック信号をやり取りし、同期しながら通信を行う</li>
+</ul>
+</li>
 <li>Wii リモコンとヌンチャクの通信で使われてるらしい</li>
 </ul>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>ボー</h1>
-<ul>
-<li>ボーレートと言ったりする</li>
-<li>シリアル通信的には、bps と同義</li>
-<li>本来の意味だと、1 秒間に何回変調を行うことが出来るか</li>
-<li>1 秒間に 300 回の変調が出来れば、300 ボーとなる</li>
-<li>シリアル通信では１回に 1 ビット転送するので、bps で表現されたりする</li>
-<li>Arduino Leonardo 対して<br />
-1200 ボーでシリアル接続して閉じるとリセットされる みたいな感じ</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="back-cover" data-theme="moja-gecko" class="back-cover" style="--class:back-cover;--theme:moja-gecko;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://stat.ameba.jp/user_images/20180314/08/w3t6t2pmaj/1c/b5/j/o0708052814149196385.jpg&quot;);background-size:50%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="19" data-class="back-cover" data-theme="moja-gecko" class="back-cover" style="--class:back-cover;--theme:moja-gecko;" data-marpit-advanced-background="content">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="back-cover" data-theme="moja-gecko" class="back-cover" style="--class:back-cover;--theme:moja-gecko;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://stat.ameba.jp/user_images/20180314/08/w3t6t2pmaj/1c/b5/j/o0708052814149196385.jpg&quot;);background-size:50%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="20" data-class="back-cover" data-theme="moja-gecko" class="back-cover" style="--class:back-cover;--theme:moja-gecko;" data-marpit-advanced-background="content">
 <h1>Just Do it!</h1>
 </section>
 <script>!function(){"use strict";let t=void 0;function e(e){let r=!1;Array.from(document.querySelectorAll("svg[data-marpit-svg]"),i=>{const{children:o,clientHeight:n,clientWidth:a,viewBox:s}=i;i.style.transform||(i.style.transform="translateZ(0)");const l=e||window!==window.parent&&window.parent.marpitSVGPolyfillZoomFactor||i.currentScale||1;t!==l&&(t=l,r=l);const c=s.baseVal.width/l,d=s.baseVal.height/l,p=Math.min(n/d,a/c);for(let t=0;t<o.length;t+=1){const{style:e}=o[t].firstChild;e.position||(e.position="fixed"),e.transformOrigin||(e.transformOrigin="0 0"),e.transform=`scale(${p}) translateZ(0)`}}),!1!==r&&Object.defineProperty(window,"marpitSVGPolyfillZoomFactor",{configurable:!0,value:r})}const r=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function i(t=!0){for(const t of"Apple Computer, Inc."===navigator.vendor?[e]:[])t();Array.from(document.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{var e;const i=t.firstChild,o=i.firstChild,{scrollWidth:n,scrollHeight:a}=o;let s,l=1;if(t.hasAttribute("data-marp-fitting-code")&&(s=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(s=t.parentElement),s){const t=getComputedStyle(s),e=Math.ceil(s.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(l=e)}const c=Math.max(n,l),d=Math.max(a,1),p=`0 0 ${c} ${d}`;r(i,"width",""+c),r(i,"height",""+d),r(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),r(t,"viewBox",p)&&t.classList.toggle("__reflow__")}),t&&window.requestAnimationFrame(()=>i(t))}!function(){if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");window.marpCoreBrowserScript?console.warn("Marp Core's browser script has already executed."):(Object.defineProperty(window,"marpCoreBrowserScript",{value:!0}),i())}()}();
-</script></foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="back-cover" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>12V、篠原くんの腕が上がらなくなるやつ</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>5V1Aで5Wとか</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>抵抗器で調整して、先の回路に必要な電流を与えたり出来る</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>ケトルはポットと違って温調保温機能が無い(1回1回沸かす為のものだから)</p><p>このケトルでラーメンを茹でる際に、吹きこぼれることのない火力を維持したい場合</p><p>電源オンオフを高速で繰り返すことで、擬似的に弱火にできる</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>USBは規格としてめちゃくちゃ複雑なので、変換チップを使ってRS232Cで通信するのがよくある</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>&lt;http://www.picfun.com&gt;</p><p>このサイト書いてあることがめちゃくちゃだった
+</script></foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section class="back-cover" style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>12V、篠原くんの腕が上がらなくなるやつ</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>5V1Aで5Wとか</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>抵抗器で調整して、先の回路に必要な電流を与えたり出来る</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>ケトルはポットと違って温調保温機能が無い(1回1回沸かす為のものだから)</p><p>このケトルでラーメンを茹でる際に、吹きこぼれることのない火力を維持したい場合</p><p>電源オンオフを高速で繰り返すことで、擬似的に弱火にできる</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>変調:情報を電気信号や電波や光などの信号として表現すること</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>USBは規格としてめちゃくちゃ複雑なので、変換チップを使ってRS232Cで通信するのがよくある</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>VCCは直接UARTとは関係無い気もするので外した</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>&lt;http://www.picfun.com&gt;</p><p>このサイト書いてあることがめちゃくちゃだった
 1つのマスターに対し複数スレーブがI2Cの特徴の様に書いたり
-I2Cが高速だと書いたり</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>変調:情報を電気信号や電波や光などの信号として表現すること</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")},e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function a(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function o(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t,n){return e(n={path:t,exports:{},require:function(e,t){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==t&&n.path)}},n.exports),n.exports}((function(e){
+I2Cが高速だと書いたり</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")},e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function a(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function o(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t,n){return e(n={path:t,exports:{},require:function(e,t){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==t&&n.path)}},n.exports),n.exports}((function(e){
 /*!
   * screenfull
   * v5.0.2 - 2020-02-13
