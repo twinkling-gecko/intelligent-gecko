@@ -7,7 +7,7 @@ theme: moja-gecko
 
 # マイコン勉強会 2 Arduino 編
 
-## Team: twinkling-gecko<br>Version: 1.0
+## Team: twinkling-gecko<br>Version: 1.1
 
 ---
 
