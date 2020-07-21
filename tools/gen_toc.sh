@@ -18,4 +18,4 @@ for file in public/reports/*; do
   echo "- [${slide%.*}]($PREFIX${slide})" >> index.md
 done
 
-mv index.md public/reports/index.md
+mv index.md public/reports.md
