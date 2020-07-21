@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: moja-gecko
+theme: moja-simple
 ---
 
 <!--- _class: cover -->
