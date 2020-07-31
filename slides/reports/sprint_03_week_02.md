@@ -66,7 +66,7 @@ theme: moja-simple
 
 ---
 
-# 小林(3/6)
+# 小林(3/6 DONE)
 
 - hungry-gecko
   - ユーザは商品を登録することができる
@@ -76,7 +76,7 @@ theme: moja-simple
 
 ---
 
-# 篠原(6/12)
+# 篠原(6/12 DONE)
 
 - hungry-gecko
   - ユーザは商品を登録することができる
