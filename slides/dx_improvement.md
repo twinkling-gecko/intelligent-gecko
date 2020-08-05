@@ -61,9 +61,9 @@ theme: moja-teal
 # 今日のテーマ（ハンズオン）
 
 - 自分のエディタを強化しよう
-  - ショートカットで自動フォーマットをかけられるようにしよう
   - 見やすいカラースキームを設定しよう
   - language-server の支援が働くようにしよう
+  - ショートカットで自動フォーマットしよう
   - 便利なスニペットを導入しよう
   - 有用な設定を共有しよう
   - 自慢のショートカットを共有しよう
@@ -72,3 +72,67 @@ theme: moja-teal
 エンジニアにとってエディタは最も長い時間付き合う道具。
 ここを妥協するかこだわるかで開発効率が大きく変わります。まずは足回りから。
 
+---
+
+# 見やすいカラースキームを設定しよう
+
+- これは正直好み
+- でも自分が「可読性が高い」と思うものにしましょう
+- 「色がすき」とかもモチベに直結するので大事
+- 探し方
+  - [VSCode](https://marketplace.visualstudio.com/search?target=VSCode&category=Themes&sortBy=Installs) marketplace で theme とかで検索すると結構出る
+  - [vim](http://vimcolors.com/) vimcolors が便利
+
+---
+
+# 私の VSCode
+
+- [ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) の mirage がすき
+
+<div style="text-align: center">
+
+![w:800](https://user-images.githubusercontent.com/34061817/89371118-64008300-d71d-11ea-8a6a-d4a694807664.png)
+
+<div>
+
+---
+
+# 私の nvim
+
+- 最近 [palenight](https://github.com/drewtempelmeyer/palenight.vim) が気に入った
+
+<div style="text-align: center">
+
+![w:800](https://user-images.githubusercontent.com/34061817/89371334-091b5b80-d71e-11ea-8667-5adebeebfb4b.png)
+
+<div>
+
+---
+
+# language-server の支援が働くようにしよう
+
+- language-server は VSCode に組み込まれてる補完周りの機能
+  - 補完とかフォーマットとか参照元ジャンプとか
+- プロトコルとして OSS で公開されているので、
+  対応したクライアントがあれば大抵のエディタで使える
+  - 私は nvim + [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim) を使ってる
+  - 前は LC-neovim と deoplete と neosnippet とでやってたけど管理ダルくなった
+  - coc は補完周りから LSP の管理までやってくれるので楽
+- VSCode では対応する拡張を入れるだけで大体うごく
+  - 例えば [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) を入れると gopls によって golang の LSP 環境ができる
+
+---
+
+# LS 補完の動作の例
+
+![bg 90%](https://user-images.githubusercontent.com/34061817/89371642-dd4ca580-d71e-11ea-9061-110aaef345f4.png)
+
+![bg 80%](https://user-images.githubusercontent.com/34061817/89371799-564bfd00-d71f-11ea-8b17-8164b7a7219e.png)
+
+---
+
+# ショートカットで自動フォーマットしよう
+
+- LSP の機能や Prettier などのフォーマッタで自動フォーマットできるとすごく楽
+- ショートカット振って呼吸するようにフォーマットしていけ
+- おすすめは Ctrl-F
