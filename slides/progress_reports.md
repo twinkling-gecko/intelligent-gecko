@@ -26,6 +26,7 @@ img {
 ![bg right 70%](https://user-images.githubusercontent.com/34061817/88744753-38acef80-d183-11ea-88a5-5b4b4f8f1230.png)
 
 - モノが来ねえ
+- 日報文化
 - 勉強 LT 会
 - ライブコーディング
 - DX/PX 向上デー
@@ -59,6 +60,19 @@ img {
 - スクラム周りは Jira Software
 - Slack に Jira, Github からの通知を飛ばして進捗を可視化
 - レトロスペクティブは Trello で KPT
+
+---
+
+# 日報文化
+
+![bg right](https://user-images.githubusercontent.com/34061817/89443622-7d401880-d78b-11ea-9bdb-74bb4fe1eb7f.png)
+
+- デイリースクラムでの報告に課題を感じた
+- 個々人のその日の作業進捗を記録する
+- 成果に出ない進捗を可視化するのが目的
+- 課題の認識、フォローを行える文化づくり
+  - ⚠ スクラムはチームで解決する手法
+- 自タスクを整理して振り返りの効果もある
 
 ---
 
