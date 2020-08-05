@@ -96,6 +96,19 @@ img {
 
 ---
 
+# DX/PX 向上デー
+
+- https://twinkling-gecko.github.io/intelligent-gecko/dx_improvement.html
+- 試験的にやってみた施策
+- 実装技術に関することではなく、開発する上での Experience を向上することに費やす日
+  - 1/sprint とか 1/week とかで定例的にやっていきたい
+- CI/CD 整備
+- test や style check の自動化
+- エディタの設定やプラグインの知見の共有
+- その他開発効率を高める知見の共有 など
+
+---
+
 # ハンズオン
 
 product: brave-gecko, hungry-gecko
@@ -132,19 +145,6 @@ golang で実装した Discord bot
 - 今は heroku 自動デプロイされるようにしてある
 
 <img id="brave" src="https://user-images.githubusercontent.com/34061817/88748130-377fc080-d18b-11ea-8b23-d497763bd3cf.png">
-
----
-
-# DX/PX 向上デー
-
-- https://twinkling-gecko.github.io/intelligent-gecko/dx_improvement.html
-- 試験的にやってみた施策
-- 実装技術に関することではなく、開発する上での Experience を向上することに費やす日
-  - 1/sprint とか 1/week とかで定例的にやっていきたい
-- CI/CD 整備
-- test や style check の自動化
-- エディタの設定やプラグインの知見の共有
-- その他開発効率を高める知見の共有 など
 
 ---
 
