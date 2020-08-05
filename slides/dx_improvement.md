@@ -15,7 +15,7 @@ theme: moja-teal
 
 - **D**eveloper e**X**perience
   - 開発・保守する上での体験
-- **P**rogramming **e**xperience
+- **P**rogramming e**X**perience
   - プログラミングする上での体験
 - 厳密な定義はない、「これが俺の DX 向上だ」といえばそれが DX 向上
   - とはいえ「良いデスクを買う」とかはどうなんだろうか...

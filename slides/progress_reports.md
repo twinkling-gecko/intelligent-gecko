@@ -28,6 +28,7 @@ img {
 - モノが来ねえ
 - 勉強 LT 会
 - ライブコーディング
+- DX/PX 向上デー
 - ハンズオン会
   - brave-gecko
   - hungry-gecko
@@ -134,6 +135,19 @@ golang で実装した Discord bot
 
 ---
 
+# DX/PX 向上デー
+
+- https://twinkling-gecko.github.io/intelligent-gecko/dx_improvement.html
+- 試験的にやってみた施策
+- 実装技術に関することではなく、開発する上での Experience を向上することに費やす日
+  - 1/sprint とか 1/week とかで定例的にやっていきたい
+- CI/CD 整備
+- test や style check の自動化
+- エディタの設定やプラグインの知見の共有
+- その他開発効率を高める知見の共有 など
+
+---
+
 # ハンズオン: hungry-gecko（腹ぺこヤモリ）
 
 - https://github.com/twinkling-gecko/hungry-gecko
@@ -145,7 +159,7 @@ golang で実装した Discord bot
 - docker による上記サービスの管理
 - CI/CD での品質管理・自動デプロイ
   - TBD: デプロイ先
-    （GCP が一番無料クレジット扱いやすいのでGKEになりそう）
+    （GCP が一番無料クレジット扱いやすいので GKE になりそう）
 
 ---
 
@@ -157,6 +171,25 @@ golang で実装した Discord bot
 
 ---
 
+<!-- _class: hero -->
+
+<style>
+section.hero, section.hero h1 {
+  color: white;
+  text-shadow:
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black,
+    0px 0px 3px black;
+}
+</style>
+
 # 今後
 
 モノが来るまではネタを探してハンズオンを続けます...
+
+![bg](https://user-images.githubusercontent.com/34061817/89409465-10ae2500-d75d-11ea-8e78-92e27661d24b.png)
