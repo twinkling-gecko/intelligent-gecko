@@ -108,10 +108,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@s10akir/marp-moja-gecko@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@s10akir/marp-moja-gecko/0.1.0/028aa24883ab7b1fb101e736f1b410fca9ee2089c6d9b12dce51a953d96e2aa5#bee3bbe453abb037273d9c0b567a2dbd9485e3e5"
-  integrity sha512-oCcGyOxh4su+wfWg2q4y9W++Z/5VatVXNPO8AxSto/435NURBa4kmGWltI6xdxJqRBbC/P7wXyfN0stYbnWnQQ==
+"@s10akir/marp-moja-gecko@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@s10akir/marp-moja-gecko/0.1.1/fd5de0d2d933308daaf06b8ac3f822aae6302a743cead480ce13d7647b6a270f#0616e26432317f2f84b46dd530e16095a9146005"
+  integrity sha512-clbBRxau0kpMje2N0n4yiT5jpKJntbmWpEvOVAivdJD49N4x69SZ+yi4i0CzPgcsUHt/jWD79Kz/LwA17IEBzQ==
   dependencies:
     "@marp-team/marp-cli" "^0.18.2"
 
