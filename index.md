@@ -10,6 +10,7 @@
 - [go_lecture_02](https://twinkling-gecko.github.io/intelligent-gecko/go_lecture_02.html)
 - [micon_01](https://twinkling-gecko.github.io/intelligent-gecko/micon_01.html)
 - [micon_02](https://twinkling-gecko.github.io/intelligent-gecko/micon_02.html)
+- [midterm-report](https://twinkling-gecko.github.io/intelligent-gecko/midterm-report.html)
 - [oauth](https://twinkling-gecko.github.io/intelligent-gecko/oauth.html)
 - [pair_programming](https://twinkling-gecko.github.io/intelligent-gecko/pair_programming.html)
 - [progress_reports](https://twinkling-gecko.github.io/intelligent-gecko/progress_reports.html)
