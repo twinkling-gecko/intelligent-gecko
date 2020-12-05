@@ -85,7 +85,9 @@ http://bonotake.hatenablog.com/entry/2018/01/12/085058
 
 # テーマ概要 (2)
 
-![gaiyo2](https://user-images.githubusercontent.com/38117745/100575928-6f0c9e00-3320-11eb-805f-56168bfdfde9.png)
+## システム概要
+
+![image](https://user-images.githubusercontent.com/38117745/101243916-a7f4aa80-3746-11eb-9143-f1dc27e43b64.png)
 
 <!-- (原稿)
 具体的な内容に移ります。
