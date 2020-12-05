@@ -68,7 +68,7 @@
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>開発環境について(プラットフォーム 1/2)</h1>
+<h1>開発環境について (1/3)</h1>
 <h2>環境の差</h2>
 <ul>
 <li>貸与品 dynabook &amp; Windows + WSL2 + Ubuntu</li>
@@ -78,15 +78,19 @@
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>開発環境について(プラットフォーム 2/2)</h1>
+<h1>開発環境について (2/3)</h1>
 <h2>コード品質の維持</h2>
 <ul>
 <li>coc.nvim の CocAction</li>
 <li>pre-commit</li>
 </ul>
+<br />
+<ul>
+<li>DX/PX 向上デーの実施</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="moja-gecko" style="--theme:moja-gecko;">
-<h1>開発環境について (マイコン)</h1>
+<h1>開発環境について (3/3)</h1>
 <h2>Vim で開発したい</h2>
 <ul>
 <li>コマンドラインでコンパイル&amp;アップロード</li>
@@ -173,23 +177,43 @@ Webアプリからコーヒーの消費量を確認することが出来ます�
 を撮影してそれっぽくつなぎ合わせるといいかも
 
 流れはDiscordに書いた内容を使う予定
-動画を止めつつ話す感じで良いかも?</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>チーム内で環境が割とバラバラ。今回はDocker+docker-composeで環境を構築し、環境に起因するトラブルを避けた。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>複数人で開発する際に問題となるのがコード品質の維持。コードスタイル等の差異は1アクションでLanguage Serverのフォーマット機能を呼び出せるCocActionやpre-commitによる検査により補正する</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>マイコンの開発をするに当たり、Arduinoプラットフォームを利用する前提で、3つの環境を試した。
+動画を止めつつ話す感じで良いかも?</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>(原稿)
+ここからは開発に関しての話になります。
+
+実際に開発をする上で、いくつか問題点がありました。
+まず1つ目が、メンバー間で開発に使うマシンや環境の差が大きいこと。
+2つ目がコード品質の維持について。
+3つ目がVimを使いたいという希望があった点。
+
+それぞれについて見ていきます。</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>(原稿)
+開発環境についての話ですが、チーム内で環境が割とバラバラになっています。今回は開発環境をDocker+docker-composeで構築し、環境に起因するトラブルを回避するようにしました。
+また、環境をコンテナに閉じ込めることでCI/CD環境へ展開する事も容易になります。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>(原稿)
+複数人で開発する際に問題となるのがコード品質の維持。コードスタイル等の差異は1アクションでLanguage Serverのフォーマット機能を呼び出せるCocActionやpre-commitによる検査により補正することにしました。
+
+また、定期的にDX/PX向上デーとして開発環境に関する知見の共有を行い、lintやフォーマッタを確認出来るようにしました。</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>(原稿)
+マイコンの開発をするに当たり、Arduinoプラットフォームを利用する前提で、3つの環境を試しました。
 
 1. Arduino IDE
 2. Arduino CLI
 3. PlatformIO
 
-最終的に私達のチームではPlatformIOをDockerに閉じ込めた環境を構築し、使用することとした。
+最終的に私達のチームではPlatformIOをDockerに閉じ込めた環境を構築して使うこととしました。
 
-Arduino IDEは手軽だが、IDEとしての使い勝手が悪いので、物品の検品を兼ねた最初期のテストにのみ使用。
+Arduino IDEは最も手軽な環境ですが、IDEとしての使い勝手が悪いので、物品の検品を兼ねた最初期のテストにのみ使用しました。
 
-任意のエディタを使うことを前提に、CLIツールによるコンパイル&amp;アップロードとライブラリの管理のソリューションを模索した。
-Arduino CLIはArduino公式でサポートされているコマンドラインツールで、当初はこれをベースにDockerに閉じ込めて、ライブラリの格納先をホストと共有することで環境を作ろうとした。
-しかし、C++のLanguage Serverがこのライブラリをincludeできなかった為、断念。
+任意のエディタを使うことを前提に、CLIツールによるコンパイル&amp;アップロードとライブラリの管理のソリューションを模索する中で、
+Arduino CLIはArduino公式でサポートされているコマンドラインツールで、当初はこれをベースにDockerに閉じ込めて、ライブラリの格納先をホストと共有することで環境を作ろうとしました。
+しかし、C++のLanguage Serverがこのライブラリをincludeできなかった為、arduino-cliを使う方法は断念。
 
 PlatformIOをベースにすることとし、ライブラリ郡はPlatformIOの持つライブラリ管理システムに乗っかり、出力されるLanguage Server用のinclude pathを記述したファイルのパスを置換することで対応。
 
-ホストの環境を汚さず、VimでC++のLanguage Serverであるcclsの支援を受けながらコーディングし、ターミナルからビルドとアップロードする環境を用意した。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>質疑応答用メモ
+ホストの環境を汚さず、VimでC++のLanguage Serverであるcclsの支援を受けながらコーディングし、ターミナルからビルドとアップロードする環境を用意しました。</p><p>TODO 図をいい感じに直す</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>(原稿)
+最後に今後の進捗とスケジュールについてです。
+まず、問題として物品の調達遅れがあり、スケジュールが大幅に後ろ倒しになっています。
+当初のスケジュールで8月中を予定していた、実物を使っての検証やプロトタイピングが10月の最終週からのスタートとなり、進捗も遅れています。
+
+今後の予定ですが、恐らく当初に予定していた部分の多くを諦めざるを得ない状況となっています。
+必要な昨日をピックアップして実装を進めていきます。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>質疑応答用メモ
 - Amazonの自動発注秤
 - ATOM Sensor</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach(e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")}),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")},e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function a(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function o(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t,n){return e(n={path:t,exports:{},require:function(e,t){return function(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}(null==t&&n.path)}},n.exports),n.exports}((function(e){
 /*!
