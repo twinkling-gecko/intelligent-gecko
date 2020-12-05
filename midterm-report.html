@@ -125,14 +125,55 @@
 <h1>ご清聴ありがとうございました</h1>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let o,r;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",({data:e,origin:o})=>{if(o===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),o=Number.parseFloat(t);Number.isNaN(o)||(r=o)}}catch(t){console.error(t)}}));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||r||t.currentScale||1;o!==c&&(o=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let o=0;o<u;o+=1){const r=t.children[o],a=r.getScreenCTM();if(a){const t=null!==(n=null===(e=r.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,o=null!==(s=null===(i=r.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=r.firstChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-o}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}}),!1!==l&&Array.from(i.querySelectorAll("iframe"),({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)})}o=1,r=void 0;const i=(t,e,o)=>{if(t.getAttribute(e)!==o)return t.setAttribute(e,o),!0};function a(t={}){const e="boolean"==typeof t?(t=>{const e=!t;return console.warn(`[DEPRECATION WARNING] Usage of observer() with boolean option has been deprecated. Please replace with the usage of option object: observer({ once: ${e?"true":"false"} }).`),{once:e}})(t):t,{once:o=!1,target:r=document}=e,a="Apple Computer, Inc."===navigator.vendor?[n]:[];let l=!o;const s=()=>{for(const t of a)t({target:r});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{var e;const o=t.firstChild,r=o.firstChild,{scrollWidth:n,scrollHeight:a}=r;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(o,"width",""+c),i(o,"height",""+d),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")})}(r),l&&window.requestAnimationFrame(s)};return s(),()=>{l=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),o=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:o})})(s?s.getRootNode():document)}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>スクラム開発における&quot;属人性の排除&quot;の解釈については諸説ある
-ここでは、うちの学校の卒制でありがちな&quot;完全な役割分担&quot;を避ける という意味合い
-http://bonotake.hatenablog.com/entry/2018/01/12/085058</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>日常生活におけるメタデータを集積・可視化するプラットフォーム</p><p>TODO 図をいい感じに直す</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>技術的な図
-私達は各家庭にセンサーを設置し、そこから得られるメタデータを集約、消費者へは通知や依存性チェックを、企業へは需要予測の最適化といった利活用をするプラットフォームの構築を目指しています。</p><p>TODO 図をいい感じに直す</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>この動画の中で、
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>(原稿)
+それでは私達の発表を始めさせていただきます。
+私達、チームtwinkling-geckoでは、
+日常生活におけるアナログデータ可視化によるQoLの向上
+をテーマとして卒業制作を進めて参りました。</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>(原稿)
+メンバーは上村、鈴木、篠原、小林の4名で、今回は作業の属人化を避ける為に誰が何処を担当すると言ったような担当分野の固定はしておらず、全員が分野を問わずに作業を担当することを目標として進めて参りました。</p><p>(メモ)
+スクラム開発における&quot;属人性の排除&quot;の解釈については諸説ある
+ここでは、うちの学校の卒制でありがちな&quot;完全な役割分担で他の分野を触ることが出来ない&quot;を避ける という意味合い
+http://bonotake.hatenablog.com/entry/2018/01/12/085058</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>(原稿)
+今回の発表では、最初にテーマの概要を説明し、デモンストレーションをお見せします。
+その後、開発周りの話、開発のスケジュールについての話 という流れで進めていこうと思います。</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>(原稿)
+私達はチームテーマとして
+&quot;日常生活におけるアナログデータ可視化による QoL の向上&quot;
+を掲げましたが、これを体現する為に、
+日常生活におけるメタデータを集積・可視化するプラットフォーム
+というものを作成しています。
+
+これは日常生活の中にあるメタデータ、
+例えば食べ物や飲み物の消費期限・カロリー
+洗剤や消耗品の残量・在庫や消耗時刻といった情報を収集し、そこから
+消費量の統計や依存性チェック、消費優先度の算出や追加購入の通知、需要予測の最適化などの付加価値を提供する為のプラットフォームとなっています。</p><p>TODO 図をいい感じに直す</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>(原稿)
+具体的な内容に移ります。
+私達のプラットフォームは主に3つの要素から構成され、
+実際にメタデータを取得する部分であり、センサーとマイコンを組み合わせたモノ、これを私達はセンシングユニットと呼んでいます。 これは各家庭や店舗に複数設置されることを想定しています。
+
+そのセンシングユニットからのデータを集約し、クラウドに構築されたプラットフォームへのデータ送信やセンシングユニットの管理を担当するローカルハブ
+
+そして、各家庭や店舗のローカルハブからデータを受け取り、それらを集積するプラットフォームという構造になっています。
+
+私達はプラットフォーム部分の構築を担当し、メタデータの利活用を行いたい企業が規格に沿ったセンシングユニットを作成、ゆくゆくは各家庭に複数のセンサーを配置し、消費者・企業の双方がこれまで活用していなかったデータを活用出来ることを目標としています。
+
+今回はロールモデルとして、重量センサーで消耗品の重量を計測し、消費量を元に統計を表示したり、依存性チェックを行うものを用意しました。
+
+他に考えられるものとして、開閉センサーを利用したドア開閉による移動量のチェックや照度センサーによる睡眠のチェックを始め、センシングユニットを開発することで、様々なメタデータを利活用することが可能です。</p><p>TODO 図をいい感じに直す</p><p>TODO プラットフォームという言葉について プロジェクトの全体を示す語と、クラウドに置くものを示す語がかぶっているので何か考える</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>(原稿)
+現段階では試作状態で、ケーブルや基板がむき出しになっていますが、こちらが重量センサータイプのセンシングユニットで、ここに計測対象物が載っています。
+
+ここからコーヒーを取って、1杯飲んで戻しました。
+
+すると、センシングユニットから飲んだ分だけ減った重量データがローカルハブに送信されます。
+
+Webアプリからコーヒーの消費量を確認することが出来ます。</p><p>(メモ)
+この動画の中で、
 - はかりで重量を測ってるシーン
 - BLEのブロードキャストの傍受
 - プラットフォームへ登録されてるところ
-を撮影してそれっぽくつなぎ合わせるといいかも</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>チーム内で環境が割とバラバラ。今回はDocker+docker-composeで環境を構築し、環境に起因するトラブルを避けた。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>複数人で開発する際に問題となるのがコード品質の維持。コードスタイル等の差異は1アクションでLanguage Serverのフォーマット機能を呼び出せるCocActionやpre-commitによる検査により補正する</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>マイコンの開発をするに当たり、Arduinoプラットフォームを利用する前提で、3つの環境を試した。
+を撮影してそれっぽくつなぎ合わせるといいかも
+
+流れはDiscordに書いた内容を使う予定
+動画を止めつつ話す感じで良いかも?</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>チーム内で環境が割とバラバラ。今回はDocker+docker-composeで環境を構築し、環境に起因するトラブルを避けた。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>複数人で開発する際に問題となるのがコード品質の維持。コードスタイル等の差異は1アクションでLanguage Serverのフォーマット機能を呼び出せるCocActionやpre-commitによる検査により補正する</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>マイコンの開発をするに当たり、Arduinoプラットフォームを利用する前提で、3つの環境を試した。
 
 1. Arduino IDE
 2. Arduino CLI
