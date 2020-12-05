@@ -64,7 +64,7 @@ http://bonotake.hatenablog.com/entry/2018/01/12/085058
 
 ## 日常生活におけるメタデータを集積・可視化するプラットフォーム
 
-![gaiyo1](https://user-images.githubusercontent.com/38117745/100575189-eb9e7d00-331e-11eb-8757-a23831aa3131.png)
+![image](https://user-images.githubusercontent.com/38117745/101239515-57238880-372b-11eb-8ae4-15e65dab1b32.png)
 
 <!-- (原稿)
 私達はチームテーマとして
