@@ -85,7 +85,7 @@ http://bonotake.hatenablog.com/entry/2018/01/12/085058
 
 ## システム概要
 
-![image](https://user-images.githubusercontent.com/38117745/101243916-a7f4aa80-3746-11eb-9143-f1dc27e43b64.png)
+![image](https://user-images.githubusercontent.com/38117745/101282076-3126e280-3816-11eb-8933-1027ee4a0c20.png)
 
 <!-- (原稿)
 具体的な内容に移ります。
@@ -111,7 +111,7 @@ http://bonotake.hatenablog.com/entry/2018/01/12/085058
 
 ## 構成要素
 
-![image](https://user-images.githubusercontent.com/38117745/101247474-35db9000-375d-11eb-86fd-88303cfe5a45.png)
+![image](https://user-images.githubusercontent.com/38117745/101282110-68958f00-3816-11eb-8367-70b3b64cef99.png)
 
 <!-- (原稿)
 続いて技術的な内容です。
