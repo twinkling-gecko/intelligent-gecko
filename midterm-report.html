@@ -64,12 +64,7 @@
 <li>開発に使うマシンや環境の差</li>
 <li>コード品質の維持</li>
 <li>Vim で開発したい</li>
-</ul>
-<h2>解決策</h2>
-<ul>
-<li>開発環境を Docker にまとめた</li>
-<li>CocAction や pre-commit による lint の活用</li>
-<li>PlatformIO を利用</li>
+<li>デプロイの手間</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-theme="moja-gecko" style="--theme:moja-gecko;">
@@ -81,6 +76,8 @@
 <li>ThinkPad &amp; Ubuntu</li>
 <li>MacBook Air &amp; MacOS</li>
 </ul>
+<br />
+<p><strong>→Docker に閉じ込めて docker-compose で管理</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>開発環境について (2/4)</h1>
@@ -110,7 +107,12 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>開発環境について (4/4)</h1>
-<h2>CI/CD について</h2>
+<h2>デプロイの手間 (CI/CD について)</h2>
+<ul>
+<li>GitHub Actions で lint をかける (CI)</li>
+<li>Cloud Build から GAE への自動デプロイ (CD)</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/38117745/101280728-12bce900-380e-11eb-990e-56144a96c0a9.png" alt="image" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="moja-gecko" style="--theme:moja-gecko;">
 <h1>進捗とスケジュールについて</h1>
@@ -201,6 +203,7 @@ Webアプリからコーヒーの消費量を確認することが出来ます�
 まず1つ目が、メンバー間で開発に使うマシンや環境の差が大きいこと。
 2つ目がコード品質の維持について。
 3つ目がVimを使いたいという希望があった点。
+4つ目がデプロイに手間がかかるという点。
 
 それぞれについて見ていきます。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>(原稿)
 開発環境についての話ですが、チーム内で環境が割とバラバラになっています。今回は開発環境をDocker+docker-composeで構築し、環境に起因するトラブルを回避するようにしました。
@@ -224,7 +227,11 @@ Arduino CLIはArduino公式でサポートされているコマンドライン�
 
 PlatformIOをベースにすることとし、ライブラリ郡はPlatformIOの持つライブラリ管理システムに乗っかり、出力されるLanguage Server用のinclude pathを記述したファイルのパスを置換することで対応。
 
-ホストの環境を汚さず、VimでC++のLanguage Serverであるcclsの支援を受けながらコーディングし、ターミナルからビルドとアップロードする環境を用意しました。</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>(原稿)</p><p>TODO</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>(原稿)
+ホストの環境を汚さず、VimでC++のLanguage Serverであるcclsの支援を受けながらコーディングし、ターミナルからビルドとアップロードする環境を用意しました。</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>(原稿)
+続いてデプロイの手間という面で、ここではGitHub Actionsにworkflowを定義し、pushされたら自動でlintが走るように。
+CIが通ってdevelopブランチにプッシュがあれば、Cloud Buildにより自動的にデプロイする環境を整えました。
+
+機能ごとにブランチを切って実装を行い、実装が終わる度にレビューを通してdevelopブランチへマージしてGAEへデプロイして待つ という流れが割と手間になっていた為、この部分の手間の軽減は効果があったと考えています。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>(原稿)
 最後に今後の進捗とスケジュールについてです。
 まず、問題として物品の調達遅れがあり、スケジュールが大幅に後ろ倒しになっています。
 当初のスケジュールで8月中を予定していた、実物を使っての検証やプロトタイピングが10月の最終週からのスタートとなり、進捗も遅れています。
